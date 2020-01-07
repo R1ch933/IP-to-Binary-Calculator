@@ -1,0 +1,31 @@
+<Calc_Box>:
+    input: input
+    canvas.before:
+        Color:
+            rgba: .3,.4,.5,1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Label:
+        font_size: "40sp"
+        text: "IP to Binary Calculator"
+        size: root.width*.7, root.height*.1
+        pos: root.width*.15, root.height*.5
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 0
+            Rectangle:
+                pos: self.pos
+                size: self.size
+    TextInput:
+        id: input
+        multiline: False
+        size: root.width* .7, root.height* .05
+        pos: root.width*.15, root.height*.4
+        text: "Please input a 12 digit ip address"
+    Button:
+        size: root.width* .3, root.height* .05
+        pos: root.width*.35, root.height*.3
+        text: "Convert"
+        font_size: 25
+        on_press: root.btn()
